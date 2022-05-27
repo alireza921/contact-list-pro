@@ -1,11 +1,12 @@
-import React from 'react'
+// import React from 'react'
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import styles from "./add-contact.module.css";
 const AddContact = ({ onAddContact }) => {
+  const navigate = useNavigate();
   const [addContact, setAddContact] = useState({
     name: "",
     email: "",
-    
   });
 
   const submitFormHandler = (e) => {
@@ -20,6 +21,7 @@ const AddContact = ({ onAddContact }) => {
       name: "",
       email: "",
     });
+    navigate("/");
   };
 
   const changeHandler = (e) => {
@@ -27,7 +29,7 @@ const AddContact = ({ onAddContact }) => {
   };
 
   return (
-    <form onSubmit={submitFormHandler} className={styles.formControll} >
+    <form onSubmit={submitFormHandler} className={styles.formControll}>
       <div className={styles.inputContainer}>
         <label> name : </label>
         <input
