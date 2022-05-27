@@ -1,0 +1,54 @@
+
+.holderContactList { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* margin: 12px ; */
+    color: #15045a;
+
+}
+
+.container { 
+    width: 70vw;
+    margin: 12px 5px;
+    padding: 8px 20px;
+    background-color: #f9fafb;
+    color: #3735ab;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+    border-radius: 12px;
+}
+
+.list { 
+    list-style-type: none;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0;
+    margin: 0;
+}
+
+.list li { 
+    margin: 5px;
+    font-size: 18px;
+}
+
+.list>li>span { 
+    font-weight: bold;
+    color: #15045a;
+
+}
+
+.remove { 
+    border : solid 2px #b91c1c ;
+    padding: 5px;
+    /* background-color: #b91c1c; */
+    color: #b91c1c;
+    border-radius: 8px;
+    cursor: pointer;
+}
