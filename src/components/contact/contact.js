@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import styles from "./contact.module.css";
 const Contact = ({ contact, onDelete }) => {
   console.log(contact);
-const {name , email , id } = contact ;
+// const {name , email , id } = contact ;
 
   return (
     <div key={contact.id} className={styles.container}>

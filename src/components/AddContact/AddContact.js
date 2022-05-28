@@ -1,4 +1,4 @@
-// import React from 'react'
+
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./add-contact.module.css";
@@ -16,7 +16,6 @@ const AddContact = ({ onAddContact }) => {
       return;
     }
     onAddContact(addContact);
-
     setAddContact({
       name: "",
       email: "",
@@ -51,8 +50,7 @@ const AddContact = ({ onAddContact }) => {
         />
       </div>
       <button type='submit' className={styles.btn}>
-        {" "}
-        Add Contact{" "}
+        Add Contact
       </button>
     </form>
   );
