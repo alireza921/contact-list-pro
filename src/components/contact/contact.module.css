@@ -13,6 +13,14 @@
     border-radius: 12px;
 }
 
+/*Link Cpm Styels */
+.container a { 
+    text-decoration: none;
+    color: #3735ab;
+    margin: 5px;
+    font-size: 18px;
+}
+
 .list { 
     list-style-type: none;
     display: flex; 
@@ -23,16 +31,16 @@
     margin: 0;
 }
 
-.list li { 
+ /* .list li { 
     margin: 5px;
     font-size: 18px;
-}
+}  */
 
 .list>li>span { 
     font-weight: bold;
     color: #15045a;
-
 }
+
 
 .remove { 
     border : solid 2px #b91c1c ;

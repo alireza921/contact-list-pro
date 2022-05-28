@@ -1,12 +1,13 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import AddContact from "./components/AddContact/AddContact";
-import Contact from "./components/contact/contact";
+
+import ContactDetail from "./components/contactDetail/contactDetail";
 import ContactList from "./components/ContactList/contactList";
 import Layout from "./Layout/Layout";
-import routes from "./routes";
+
 
 function App() {
   const [contacts, setContacts] = useState([]);
@@ -55,7 +56,7 @@ function App() {
             path='/newcontact'
             element={<AddContact onAddContact={onAddContact} />}
           />
-          <Route path='/contact/:id' element={<Contact />} />
+          <Route path='/contact/:id' element={<ContactDetail />} />
         </Routes>
       </Layout>
     </div>
