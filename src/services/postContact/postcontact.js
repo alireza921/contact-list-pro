@@ -1,5 +1,5 @@
 import http from "../httpServis"
 
-export const postContact = (newContact) => { 
-    return http.post ( "/contacts" , newContact)
+export const postContact = (addContact) => { 
+    return http.post ( "/contacts" , addContact)
 }

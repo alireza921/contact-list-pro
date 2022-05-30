@@ -1,23 +1,25 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { postContact } from "../../services/postContact/postcontact";
-import styles from "./add-contact.module.css";
-const AddContact = () => {
+import { useNavigate, useParams } from "react-router-dom";
+import { updateContact } from "../../services/putContact/putContact";
+import styles from "./edit-contact.module.css";
+const EditContact = () => {
   const navigate = useNavigate();
-
-  const [addContact, setAddContact] = useState({
+  const [editContact, setEditContact] = useState({
     name: "",
     email: "",
   });
 
+  const params = useParams();
+  const id = params.id;
+
   const submitFormHandler = (e) => {
     e.preventDefault();
-    if (!addContact.name || !addContact.email) {
+    if (!editContact.name || !editContact.email) {
       alert("this field is mandatory == ejbari");
       return;
     }
-    postContact(addContact);
-    setAddContact({
+    updateContact(editContact, id);
+    setEditContact({
       name: "",
       email: "",
     });
@@ -25,7 +27,7 @@ const AddContact = () => {
   };
 
   const changeHandler = (e) => {
-    setAddContact({ ...addContact, [e.target.name]: e.target.value });
+    setEditContact({ ...editContact, [e.target.name]: e.target.value });
   };
 
   return (
@@ -36,7 +38,7 @@ const AddContact = () => {
           type='text'
           onChange={changeHandler}
           name='name'
-          value={addContact.name}
+          value={editContact.name}
           className={styles.input}
         />
       </div>
@@ -46,15 +48,15 @@ const AddContact = () => {
           type='email'
           onChange={changeHandler}
           name='email'
-          value={addContact.email}
+          value={editContact.email}
           className={styles.input}
         />
       </div>
       <button type='submit' className={styles.btn}>
-        Add Contact
+        Edit Contact
       </button>
     </form>
   );
 };
 
-export default AddContact;
+export default EditContact;

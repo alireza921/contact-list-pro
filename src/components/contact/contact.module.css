@@ -41,7 +41,20 @@
     color: #15045a;
 }
 
+.containerBtn { 
+    display: flex;
+    /* justify-content: space-around; */
+}
 
+.edit { 
+    border : solid 2px #3735ab ;
+    padding: 5px;
+    /* background-color: #b91c1c; */
+    color: #3735ab;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-right: 8px;
+}
 .remove { 
     border : solid 2px #b91c1c ;
     padding: 5px;

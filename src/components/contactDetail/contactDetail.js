@@ -1,21 +1,18 @@
-import { useState } from "react";
-import { Link, useLocation, useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, useParams } from "react-router-dom";
 import http from "../../services/httpServis";
 import styles from "./contactDetail.module.css";
+
 const ContactDetail = () => {
-  const location = useLocation();
-  const contact = location.state;
+  const params = useParams();
+  const id = params.id;
+
+  const [contact, setContact] = useState({});
   console.log(contact);
 
-  // const params = useParams();
-  // const id = params.id;
-  // console.log(id);
-
-  // const [contact, setContact] = useState({});
-  // console.log(contact);
-
-
-  // http.get(`/contacts/${id}`).then((res) =>setContact(res.data));
+  useEffect(() => {
+    http.get(`/contacts/${id}`).then((res) => setContact(res.data));
+  }, []);
 
   return (
     <div className={styles.holderContactDetail}>

@@ -7,7 +7,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #696b85;
+    background-color: #3735ab;
     list-style-type: none;
     padding: 0;
     margin: 0;
@@ -23,7 +23,7 @@
 .item:hover { 
     background-color: #e2e8f0;
     cursor: pointer;
-    color:#37405a ;
+    color:#3735ab ;
 }
 
 .item a { 
@@ -36,11 +36,11 @@
 
 
 .item a:hover { 
-    color:#696b85 ;
+    color:#3735ab ;
 }
 
 .item :focus { 
-color: #696b85;
+color: #3735ab;
 background-color: #e2e8f0;
 padding: 8px;
 border-radius: 8px;
