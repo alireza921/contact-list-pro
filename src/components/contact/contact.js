@@ -4,7 +4,7 @@ import styles from "./contact.module.css";
 
 const Contact = ({ contact, onDelete }) => {
   return (
-    <div key={contact.id} className={styles.container}>
+    <div  className={styles.container}>
       <Link to={`/contact/${contact.id}`} state={contact}>
         <ul className={styles.list}>
           <li>

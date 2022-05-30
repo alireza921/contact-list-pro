@@ -1,9 +1,12 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { updateContact } from "../../services/putContact/putContact";
 import styles from "./edit-contact.module.css";
+import { getOneContact } from "../../services/getOneContact/getOneContact";
 const EditContact = () => {
+  
   const navigate = useNavigate();
+
   const [editContact, setEditContact] = useState({
     name: "",
     email: "",
@@ -11,6 +14,10 @@ const EditContact = () => {
 
   const params = useParams();
   const id = params.id;
+
+  useEffect(() => {
+    getOneContact(id).then((res) => setEditContact(res.data));
+  }, []);
 
   const submitFormHandler = (e) => {
     e.preventDefault();

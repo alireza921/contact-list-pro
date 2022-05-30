@@ -1,17 +1,17 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import http from "../../services/httpServis";
+import { getOneContact } from "../../services/getOneContact/getOneContact";
 import styles from "./contactDetail.module.css";
 
 const ContactDetail = () => {
+
   const params = useParams();
   const id = params.id;
 
   const [contact, setContact] = useState({});
-  console.log(contact);
 
   useEffect(() => {
-    http.get(`/contacts/${id}`).then((res) => setContact(res.data));
+   getOneContact(id).then((res) => setContact(res.data));
   }, []);
 
   return (

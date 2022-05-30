@@ -13,19 +13,24 @@ const ContactList = () => {
   }, [contacts]);
 
   const deleteContactHandler = (id) => {
-    console.log(id);
+    // console.log(id);
     deleteContact(id);
   };
 
   return (
     <div className={styles.holderContactList}>
       <h2> Contact List </h2>
-      {contacts.map((contact) => (
-        <Contact
-          contact={contact}
-          onDelete={() => deleteContactHandler(contact.id)}
-        />
-      ))}
+      {contacts ? (
+        contacts.map((contact) => (
+          <Contact
+            key={contact.id}
+            contact={contact}
+            onDelete={() => deleteContactHandler(contact.id)}
+          />
+        ))
+      ) : (
+        <h2> loading . . . </h2>
+      )}
     </div>
   );
 };
