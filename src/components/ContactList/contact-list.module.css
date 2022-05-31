@@ -8,3 +8,28 @@
     color: #15045a;
 
 }
+
+.search { 
+    background-color: #f9fafb;
+    padding: 18px 18px;
+    margin: 10px 15px;
+    border-radius: 12px;
+    font-weight: bold;
+    color: #15045a;
+}
+
+
+.search input { 
+    width: 50vw;
+    background-color: #e2e8f0;
+    outline: rgb(36, 22, 1);
+    border-radius: 5px;
+    padding: 8px;
+    margin: 3px 7px;
+    border: none;
+}
+
+.search input:focus{ 
+    background: linear-gradient(180deg,#dbc2c278, #82b8e166);
+    border: solid 2px #375cde;
+}
