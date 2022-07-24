@@ -1,7 +1,7 @@
 import axios from "axios";
 
 
-axios.defaults.baseURL = ("http://localhost:3200") ; 
+axios.defaults.baseURL = ("https://fake-server-contactlist-app.herokuapp.com/") ; 
 
 const http = { 
     get : axios.get ,
